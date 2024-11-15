@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.3",
         "laravel/framework": "^11.31",
+        "laravel/reverb": "^1.0",
         "laravel/tinker": "^2.10"
     },
     "require-dev": {
