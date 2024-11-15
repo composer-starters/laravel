@@ -2,7 +2,6 @@
 
 use NiftyCo\Skeletor\Skeletor;
 
-
 return function (Skeletor $skeletor) {
     $skeletor->intro('Welcome to the Skeletor setup wizard!');
 

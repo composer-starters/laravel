@@ -36,7 +36,7 @@ class UserFactory extends Factory
      */
     public function confirmed(): static
     {
-        return $this->state(fn(array $attributes) => [
+        return $this->state(fn (array $attributes) => [
             'confirmed_at' => now(),
         ]);
     }
