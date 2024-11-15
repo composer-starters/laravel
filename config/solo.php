@@ -8,7 +8,7 @@ return [
     // Commands that auto start.
     'commands' => [
         EnhancedTailCommand::make('Logs', 'tail -f -n 100 ' . storage_path('logs/laravel.log')),
-        'Vite' => 'npm run dev --silent',
+        'Vite' => 'npm start --silent',
     ],
 
     // Not auto-started
