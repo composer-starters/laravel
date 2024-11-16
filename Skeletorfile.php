@@ -130,5 +130,7 @@ return function (Skeletor $skeletor) {
     }
 
     $skeletor->outro('🎉 Your Laravel application is ready to go!');
-    $skeletor->log('To start the development server, run: '.$skeletor->cyan('composer dev'));
+    $skeletor->log('To get started run the following commands:');
+    $skeletor->log(' - '.$skeletor->cyan('cd '.$skeletor->workspace));
+    $skeletor->log(' - '.$skeletor->cyan('composer dev'));
 };

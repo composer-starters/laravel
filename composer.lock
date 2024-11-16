@@ -6676,12 +6676,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aniftyco/skeletor.git",
-                "reference": "a5a0788ee3add0b17983846fdf2f282e68d2931d"
+                "reference": "4e5d8488c7304a7996f2ce461d32d897a4e4eb50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aniftyco/skeletor/zipball/a5a0788ee3add0b17983846fdf2f282e68d2931d",
-                "reference": "a5a0788ee3add0b17983846fdf2f282e68d2931d",
+                "url": "https://api.github.com/repos/aniftyco/skeletor/zipball/4e5d8488c7304a7996f2ce461d32d897a4e4eb50",
+                "reference": "4e5d8488c7304a7996f2ce461d32d897a4e4eb50",
                 "shasum": ""
             },
             "require": {
@@ -6727,7 +6727,7 @@
                 "issues": "https://github.com/aniftyco/skeletor/issues",
                 "source": "https://github.com/aniftyco/skeletor/tree/master"
             },
-            "time": "2024-11-16T23:30:40+00:00"
+            "time": "2024-11-16T23:33:22+00:00"
         },
         {
             "name": "brianium/paratest",
