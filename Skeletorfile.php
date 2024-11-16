@@ -122,7 +122,9 @@ return function (Skeletor $skeletor) {
             success: 'Git repository initialized.',
             error: 'Failed to initialize git repository.',
             callback: function () use ($skeletor) {
-                $skeletor->exec(['git', 'init']);
+                $skeletor->exec(['git', 'init', '-q']);
+                $skeletor->exec(['git', 'add', '.']);
+                $skeletor->exec(['git', 'commit', '-q', '-m', '"Setup fresh Laravel application"']);
             }
         );
     }
