@@ -18,7 +18,8 @@
         "laravel/pint": "^1.18",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.5",
-        "phpunit/phpunit": "^11.4"
+        "pestphp/pest": "^3.5",
+        "pestphp/pest-plugin-laravel": "^3.0"
     },
     "autoload": {
         "psr-4": {
@@ -33,6 +34,11 @@
         }
     },
     "scripts": {
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "php artisan solo"
+        ],
+        "test": "vendor/bin/pest",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -42,10 +48,6 @@
         ],
         "post-create-project-cmd": [
             "NiftyCo\\Skeletor\\Runner::execute"
-        ],
-        "dev": [
-            "Composer\\Config::disableProcessTimeout",
-            "php artisan solo"
         ]
     },
     "extra": {
