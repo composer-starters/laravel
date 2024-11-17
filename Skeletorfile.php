@@ -116,19 +116,6 @@ return function (Skeletor $skeletor) {
         );
     }
 
-    if ($skeletor->confirm('Would you like to create a git repository?', true)) {
-        $skeletor->spin(
-            message: 'Initializing git repository',
-            success: 'Git repository initialized.',
-            error: 'Failed to initialize git repository.',
-            callback: function () use ($skeletor) {
-                $skeletor->exec(['git', 'init', '-q']);
-                $skeletor->exec(['git', 'add', '.']);
-                $skeletor->exec(['git', 'commit', '-q', '-m', '"Setup fresh Laravel application"']);
-            }
-        );
-    }
-
     $skeletor->outro('🎉 Your Laravel application is ready to go!');
     $skeletor->log('To get started run the following commands:');
     $skeletor->log(' - '.$skeletor->cyan('cd '.$skeletor->workspace));
