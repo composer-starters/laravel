@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dff3531f17002280df911cb9ded898b8",
+    "content-hash": "b6d627499a84cb157e2ca82c4ce73896",
     "packages": [
         {
             "name": "brick/math",
@@ -6672,16 +6672,16 @@
         },
         {
             "name": "aniftyco/skeletor",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aniftyco/skeletor.git",
-                "reference": "4e5d8488c7304a7996f2ce461d32d897a4e4eb50"
+                "reference": "7b4020f35861404a7a48d0fd976ef20e54e724b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aniftyco/skeletor/zipball/4e5d8488c7304a7996f2ce461d32d897a4e4eb50",
-                "reference": "4e5d8488c7304a7996f2ce461d32d897a4e4eb50",
+                "url": "https://api.github.com/repos/aniftyco/skeletor/zipball/7b4020f35861404a7a48d0fd976ef20e54e724b0",
+                "reference": "7b4020f35861404a7a48d0fd976ef20e54e724b0",
                 "shasum": ""
             },
             "require": {
@@ -6695,7 +6695,6 @@
                 "laravel/pint": "^1.18",
                 "pestphp/pest": "^3.5"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -6725,9 +6724,9 @@
             ],
             "support": {
                 "issues": "https://github.com/aniftyco/skeletor/issues",
-                "source": "https://github.com/aniftyco/skeletor/tree/master"
+                "source": "https://github.com/aniftyco/skeletor/tree/v0.1.0"
             },
-            "time": "2024-11-16T23:33:22+00:00"
+            "time": "2024-11-17T19:50:00+00:00"
         },
         {
             "name": "brianium/paratest",
@@ -9713,9 +9712,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "aniftyco/skeletor": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

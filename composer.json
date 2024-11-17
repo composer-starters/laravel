@@ -13,7 +13,7 @@
     },
     "require-dev": {
         "aaronfrancis/solo": "^0.1.2",
-        "aniftyco/skeletor": "dev-master",
+        "aniftyco/skeletor": "^0.1.0",
         "fakerphp/faker": "^1.24",
         "laravel/pint": "^1.18",
         "mockery/mockery": "^1.6",
