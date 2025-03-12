@@ -117,8 +117,22 @@ return function (Skeletor $skeletor) {
         );
     }
 
-    $skeletor->outro('🎉 Your Laravel application is ready to go!');
-    $skeletor->log('To get started run the following commands:');
-    $skeletor->log(' - '.$skeletor->cyan('cd '.$skeletor->workspace));
-    $skeletor->log(' - '.$skeletor->cyan('php artisan solo'));
+    $origin = $skeletor->text(
+        label: 'What is your git repository remote?',
+        placeholder: 'E.g. git@github.com:example/example-app.git',
+        required: false
+    );
+
+    return function () use ($skeletor, $origin) {
+        if (! empty($origin)) {
+            $skeletor->exec(['git', 'init']);
+            $skeletor->exec(['git', 'remote', 'add', 'origin', $origin]);
+            $skeletor->exec(['git', 'commit', '-am', '"initial commit"']);
+        }
+
+        $skeletor->outro('🎉 Your Laravel application is ready to go!');
+        $skeletor->log('To get started run the following commands:');
+        $skeletor->log(' - '.$skeletor->cyan('cd '.$skeletor->workspace));
+        $skeletor->log(' - '.$skeletor->cyan('php artisan solo'));
+    };
 };
