@@ -127,7 +127,8 @@ return function (Skeletor $skeletor) {
         if (! empty($origin)) {
             $skeletor->exec(['git', 'init']);
             $skeletor->exec(['git', 'remote', 'add', 'origin', $origin]);
-            $skeletor->exec(['git', 'commit', '-am', '"initial commit"']);
+            $skeletor->exec(['git', 'add', '-A']);
+            $skeletor->exec(['git', 'commit', '-m', '"initial commit"']);
         }
 
         $skeletor->outro('🎉 Your Laravel application is ready to go!');
