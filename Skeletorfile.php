@@ -9,6 +9,7 @@ return function (Skeletor $skeletor) {
         label: 'What is the name of your application?',
         placeholder: 'E.g. example-app',
         required: 'Your application name is required.',
+        default: $skeletor->workspace,
         validate: function ($value) {
             if (preg_match('/[^\pL\pN\-_.]/', $value) !== 0) {
                 return 'The name may only contain letters, numbers, dashes, underscores, and periods.';
@@ -119,5 +120,5 @@ return function (Skeletor $skeletor) {
     $skeletor->outro('🎉 Your Laravel application is ready to go!');
     $skeletor->log('To get started run the following commands:');
     $skeletor->log(' - '.$skeletor->cyan('cd '.$skeletor->workspace));
-    $skeletor->log(' - '.$skeletor->cyan('composer dev'));
+    $skeletor->log(' - '.$skeletor->cyan('php artisan solo'));
 };
