@@ -17,7 +17,7 @@
 First thing you want to do is scaffold out a new project with the following command:
 
 ```shell
-composer create-project starter/laravel my-app
+laravel new --use starter/laravel my-app
 ```
 
 Replace `my-app` with whatever you want to name your project. This will kickoff Composer's normal project scaffolding and then execute the [Skeletor](https://github.com/aniftyco/starter) setup for configuring the starter.
