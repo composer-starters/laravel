@@ -164,7 +164,8 @@ return function (Skeletor $skeletor) {
 
     $origin = $skeletor->text(
         label: 'What is your git repository remote?',
-        placeholder: 'E.g. git@github.com:example/example-app.git',
+        placeholder: "E.g. git@github.com:example/{$skeletor->workspace}.git",
+        default: "git@github.com:example/{$skeletor->workspace}.git",
         required: false
     );
 
