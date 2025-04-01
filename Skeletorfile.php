@@ -154,7 +154,6 @@ return function (Skeletor $skeletor) {
         $skeletor->spin(
             message: "Installing $type",
             success: "$type installed.",
-            error: "Failed to install $type.",
             callback: $callback
         );
     }
