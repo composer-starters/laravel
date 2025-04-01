@@ -2,6 +2,11 @@
 
 use NiftyCo\Skeletor\Skeletor;
 
+function stub(string $name): string
+{
+    return "https://raw.githubusercontent.com/composer-starters/laravel/refs/heads/master/.github/stubs/{$name}.stub";
+}
+
 return function (Skeletor $skeletor) {
     $skeletor->intro('Welcome to the Skeletor setup wizard!');
 
@@ -130,10 +135,10 @@ return function (Skeletor $skeletor) {
                 $skeletor->exec(['npm', 'install', '--save-dev', '@types/react', '@types/react-dom', '@vitejs/plugin-react', ...$deps['npm']]);
                 $skeletor->exec(['php', 'artisan', 'inertia:middleware']);
                 $skeletor->removeFile('resources/client/app.ts');
-                $skeletor->writeFile('resources/client/app.tsx', $skeletor->readFile('.github/stubs/react.app.stub'));
-                $skeletor->writeFile('resources/views/app.blade.php', $skeletor->readFile('.github/stubs/react.view.stub'));
+                $skeletor->writeFile('resources/client/app.tsx', $skeletor->readFile(stub('react.app')));
+                $skeletor->writeFile('resources/views/app.blade.php', $skeletor->readFile(stub('react.view')));
                 $skeletor->removeFile('vite.config.ts');
-                $skeletor->writeFile('vite.config.ts', $skeletor->readFile('.github/stubs/react.vite.stub'));
+                $skeletor->writeFile('vite.config.ts', $skeletor->readFile(stub('react.vite')));
             }],
             'vue' => ['Inertia with Vue', function () use ($skeletor, $deps) {
                 $skeletor->exec(['composer', 'require', 'inertiajs/inertia-laravel', ...$deps['composer']]);
@@ -141,10 +146,10 @@ return function (Skeletor $skeletor) {
                 $skeletor->exec(['npm', 'install', '--save-dev', '@vitejs/plugin-vue', ...$deps['npm']]);
                 $skeletor->exec(['php', 'artisan', 'inertia:middleware']);
                 $skeletor->removeFile('resources/client/app.ts');
-                $skeletor->writeFile('resources/client/app.ts', $skeletor->readFile('.github/stubs/vue.app.stub'));
-                $skeletor->writeFile('resources/views/app.blade.php', $skeletor->readFile('.github/stubs/vue.view.stub'));
+                $skeletor->writeFile('resources/client/app.ts', $skeletor->readFile(stub('vue.app')));
+                $skeletor->writeFile('resources/views/app.blade.php', $skeletor->readFile(stub('vue.view')));
                 $skeletor->removeFile('vite.config.ts');
-                $skeletor->writeFile('vite.config.ts', $skeletor->readFile('.github/stubs/vue.vite.stub'));
+                $skeletor->writeFile('vite.config.ts', $skeletor->readFile(stub('vue.vite')));
             }],
             'livewire' => ['Livewire', function () use ($skeletor) {
                 $skeletor->exec(['composer', 'require', 'livewire/livewire']);
