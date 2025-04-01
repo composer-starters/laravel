@@ -22,6 +22,7 @@ return function (Skeletor $skeletor) {
         success: 'Environment set.',
         error: 'Failed to set up environment.',
         callback: function () use ($skeletor, $name) {
+            $skeletor->copyFile('.env.example', '.env');
             $skeletor->exec(['php', 'artisan', 'key:generate', '--ansi']);
             $skeletor->replaceInFile('APP_NAME=Laravel', 'APP_NAME='.$name, '.env');
             $skeletor->replaceInFile('APP_NAME=Laravel', 'APP_NAME='.$name, '.env.example');
@@ -105,14 +106,56 @@ return function (Skeletor $skeletor) {
         );
     }
 
-    if ($skeletor->confirm('Would you like to install the front-end dependencies?', true)) {
+    $frontend = $skeletor->select('Which front-end framework would you like to use?', [
+        'none' => 'None',
+        'react' => 'Inertia with React',
+        'vue' => 'Inertia with Vue',
+        'livewire' => 'Livewire',
+    ], 'none');
+
+    if ($frontend !== 'none') {
+        $deps = [
+            'npm' => [
+                'vite-plugin-ziggy',
+            ],
+            'composer' => [
+                'tightenco/ziggy',
+            ],
+        ];
+
+        [$type, $callback] = match ($frontend) {
+            'react' => ['Inertia with React', function () use ($skeletor, $deps) {
+                $skeletor->exec(['composer', 'require', 'inertiajs/inertia-laravel', ...$deps['composer']]);
+                $skeletor->exec(['npm', 'install', 'react', 'react-dom', '@inertiajs/react']);
+                $skeletor->exec(['npm', 'install', '--save-dev', '@types/react', '@types/react-dom', '@vitejs/plugin-react', ...$deps['npm']]);
+                $skeletor->exec(['php', 'artisan', 'inertia:middleware']);
+                $skeletor->removeFile('resources/client/app.ts');
+                $skeletor->writeFile('resources/client/app.tsx', $skeletor->readFile('.github/stubs/react.app.stub'));
+                $skeletor->writeFile('resources/views/app.blade.php', $skeletor->readFile('.github/stubs/react.view.stub'));
+                $skeletor->removeFile('vite.config.ts');
+                $skeletor->writeFile('vite.config.ts', $skeletor->readFile('.github/stubs/react.vite.stub'));
+            }],
+            'vue' => ['Inertia with Vue', function () use ($skeletor, $deps) {
+                $skeletor->exec(['composer', 'require', 'inertiajs/inertia-laravel', ...$deps['composer']]);
+                $skeletor->exec(['npm', 'install', 'vue', '@inertiajs/vue3']);
+                $skeletor->exec(['npm', 'install', '--save-dev', '@vitejs/plugin-vue', ...$deps['npm']]);
+                $skeletor->exec(['php', 'artisan', 'inertia:middleware']);
+                $skeletor->removeFile('resources/client/app.ts');
+                $skeletor->writeFile('resources/client/app.ts', $skeletor->readFile('.github/stubs/vue.app.stub'));
+                $skeletor->writeFile('resources/views/app.blade.php', $skeletor->readFile('.github/stubs/vue.view.stub'));
+                $skeletor->removeFile('vite.config.ts');
+                $skeletor->writeFile('vite.config.ts', $skeletor->readFile('.github/stubs/vue.vite.stub'));
+            }],
+            'livewire' => ['Livewire', function () use ($skeletor) {
+                $skeletor->exec(['composer', 'require', 'livewire/livewire']);
+            }],
+        };
+
         $skeletor->spin(
-            message: 'Installing front-end dependencies',
-            success: 'Front-end dependencies installed.',
-            error: 'Failed to install front-end dependencies.',
-            callback: function () use ($skeletor) {
-                $skeletor->exec(['npm', 'install']);
-            }
+            message: "Installing $type",
+            success: "$type installed.",
+            error: "Failed to install $type.",
+            callback: $callback
         );
     }
 
@@ -124,10 +167,17 @@ return function (Skeletor $skeletor) {
 
     return function () use ($skeletor, $origin) {
         if (! empty($origin)) {
-            $skeletor->exec(['git', 'init']);
-            $skeletor->exec(['git', 'remote', 'add', 'origin', $origin]);
-            $skeletor->exec(['git', 'add', '-A']);
-            $skeletor->exec(['git', 'commit', '-m', '"initial commit"']);
+            $skeletor->spin(
+                message: 'Setting up git remote...',
+                success: 'Git remote set.',
+                error: 'Failed to set up git remote.',
+                callback: function () use ($skeletor, $origin) {
+                    $skeletor->exec(['git', 'init']);
+                    $skeletor->exec(['git', 'remote', 'add', 'origin', $origin]);
+                    $skeletor->exec(['git', 'add', '-A']);
+                    $skeletor->exec(['git', 'commit', '-m', '"initial commit"']);
+                }
+            );
         }
 
         $skeletor->outro('🎉 Your Laravel application is ready to go!');

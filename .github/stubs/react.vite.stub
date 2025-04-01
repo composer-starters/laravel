@@ -1,0 +1,27 @@
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+import tailwindcss from '@tailwindcss/vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+    tsconfigPaths(),
+    react(),
+    laravel({
+      input: ['resources/client/tailwind.css', 'resources/client/app.ts'],
+      refresh: true,
+    }),
+  ],
+  esbuild: {
+    jsx: 'automatic',
+  },
+  resolve: {
+    alias: {
+      '@app': resolve(__dirname, 'resources/client'),
+      '@vendor': resolve(__dirname, 'vendor/'),
+    },
+  },
+});
