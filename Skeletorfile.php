@@ -25,9 +25,8 @@ return function (Skeletor $skeletor) {
     $skeletor->spin(
         message: 'Setting up environment...',
         success: 'Environment set.',
-        error: 'Failed to set up environment.',
         callback: function () use ($skeletor, $name) {
-            $skeletor->copyFile('.env.example', '.env');
+            $skeletor->writeFile('.env', $skeletor->readFile('.env.example'));
             $skeletor->exec(['php', 'artisan', 'key:generate', '--ansi']);
             $skeletor->replaceInFile('APP_NAME=Laravel', 'APP_NAME='.$name, '.env');
             $skeletor->replaceInFile('APP_NAME=Laravel', 'APP_NAME='.$name, '.env.example');
