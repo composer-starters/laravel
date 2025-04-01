@@ -11,7 +11,7 @@ export default defineConfig({
     tsconfigPaths(),
     react(),
     laravel({
-      input: ['resources/client/tailwind.css', 'resources/client/app.ts'],
+      input: ['resources/client/tailwind.css', 'resources/client/app.tsx'],
       refresh: true,
     }),
   ],
