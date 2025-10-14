@@ -40,6 +40,22 @@
     }
   },
   "scripts": {
+    "setup": [
+      "composer install",
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+      "@php artisan key:generate",
+      "@php artisan migrate --force",
+      "npm install",
+      "npm run build"
+    ],
+    "dev": [
+      "Composer\\Config::disableProcessTimeout",
+      "php artisan solo"
+    ],
+    "test": [
+      "@php artisan config:clear --ansi",
+      "@php artisan test"
+    ],
     "post-autoload-dump": [
       "@php artisan config:clear",
       "@php artisan clear-compiled",
@@ -56,14 +72,6 @@
     ],
     "pre-package-uninstall": [
       "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
-    ],
-    "dev": [
-      "Composer\\Config::disableProcessTimeout",
-      "php artisan solo"
-    ],
-    "test": [
-      "@php artisan config:clear --ansi",
-      "@php artisan test"
     ]
   },
   "extra": {
