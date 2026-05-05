@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('key')->primary();
 
             $table->mediumText('value');
-            $table->integer('expiration');
+            $table->integer('expiration')->index();
         });
     }
 

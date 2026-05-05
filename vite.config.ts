@@ -19,4 +19,9 @@ export default defineConfig({
       '@vendor': resolve(__dirname, 'vendor/'),
     },
   },
+  server: {
+    watch: {
+      ignored: ['**/storage/framework/views/**'],
+    },
+  },
 });
