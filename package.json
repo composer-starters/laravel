@@ -9,18 +9,16 @@
   "prettier": "@aniftyco/prettier",
   "devDependencies": {
     "@aniftyco/prettier": "^0.1.0",
-    "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/vite": "^4.0.17",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/vite": "^4.2.4",
     "@types/node": "^22.13.14",
-    "axios": "^1.8.4",
     "laravel-echo": "^2.0.2",
-    "laravel-vite-plugin": "^2.0.0",
+    "laravel-vite-plugin": "^3.1",
     "prettier": "^3.5.3",
     "pusher-js": "^8.4.0",
-    "tailwindcss": "^4.0.17",
+    "tailwindcss": "^4.2.4",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.8.2",
-    "vite": "^7.0.7",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite": "^8.0.0"
   }
 }
