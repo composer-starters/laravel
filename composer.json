@@ -2,14 +2,14 @@
   "$schema": "https://getcomposer.org/schema.json",
   "name": "starter/laravel",
   "type": "project",
-  "description": "A skeleton application for the Laravel framework.",
+  "description": "NiftyCo's starter kit for the Laravel framework.",
   "keywords": [
     "laravel",
     "framework",
-    "skeleton",
-    "skeletor",
     "starter",
-    "composer-starter"
+    "starter-kit",
+    "aniftyco",
+    "niftyco"
   ],
   "license": "MIT",
   "require": {
@@ -19,7 +19,6 @@
     "laravel/tinker": "^3.0"
   },
   "require-dev": {
-    "aniftyco/skeletor": "^0.1",
     "fakerphp/faker": "^1.24",
     "laravel/pint": "^1.27",
     "mockery/mockery": "^1.6",
@@ -58,9 +57,6 @@
     ],
     "post-update-cmd": [
       "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-    ],
-    "post-create-project-cmd": [
-      "NiftyCo\\Skeletor\\Runner::execute"
     ],
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

@@ -1,22 +1,23 @@
 <p align="center"><img src=".github/assets/banner.png" width="600" alt="Laravel Logo"></p>
 
 <p align="center">
-<a href="https://github.com/composer-starters/laravel/actions"><img src="https://github.com/composer-starters/laravel/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
+<a href="https://github.com/aniftyco/laravel/actions"><img src="https://github.com/aniftyco/laravel/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/starter/laravel"><img src="https://img.shields.io/packagist/dt/starter/laravel" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/starter/laravel"><img src="https://img.shields.io/packagist/v/starter/laravel" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/starter/laravel"><img src="https://img.shields.io/packagist/l/starter/laravel" alt="License"></a>
 </p>
 
+NiftyCo's Laravel starter kit. The defacto starting point for any NiftyCo project built on Laravel.
+
 ## Getting Started
 
-First thing you want to do is scaffold out a new project with the following command:
+Scaffold a new project with the Laravel installer:
 
 ```shell
-composer create-project starter/laravel my-app
+laravel new my-app --using starter/laravel
 ```
 
-Replace `my-app` with whatever you want to name your project. This will kickoff Composer's normal project scaffolding
-and then execute the [Skeletor](https://github.com/aniftyco/skeletor) setup for configuring the starter.
+Replace `my-app` with whatever you want to name your project.
 
 ## License
 
