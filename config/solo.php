@@ -1,7 +1,6 @@
 <?php
 
 use SoloTerm\Solo\Commands\Command;
-use SoloTerm\Solo\Commands\EnhancedTailCommand;
 use SoloTerm\Solo\Commands\MakeCommand;
 use SoloTerm\Solo\Hotkeys;
 use SoloTerm\Solo\Themes;
@@ -46,7 +45,7 @@ return [
     |
     */
     'commands' => [
-        'Logs' => EnhancedTailCommand::file(storage_path('logs/laravel.log')),
+        'Logs' => 'tail -f -n 100 '.storage_path('logs/laravel.log'),
         'Vite' => 'npm start --silent',
         'Make' => new MakeCommand,
 
