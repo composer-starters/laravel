@@ -15,7 +15,6 @@
   "require": {
     "php": "^8.5",
     "laravel/framework": "^13.7",
-    "laravel/reverb": "^1.4",
     "laravel/tinker": "^3.0"
   },
   "require-dev": {

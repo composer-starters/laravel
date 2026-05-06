@@ -7,7 +7,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["vite/client", "./env.d.ts"],
+    "types": ["vite/client"],
     "paths": {
       "@app/*": ["./resources/client/*"],
       "@vendor/*": ["./vendor/*"]
