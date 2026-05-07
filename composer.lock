@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ac03701695545fffab186756a4d1e2d",
+    "content-hash": "78169511bc3b1873e060986b0f542cfd",
     "packages": [
         {
             "name": "brick/math",
@@ -3538,16 +3538,16 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.6.0",
+            "version": "v3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
+                "reference": "50f59d1f3ca46d41ac911f97a78626b6756af35b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
-                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/50f59d1f3ca46d41ac911f97a78626b6756af35b",
+                "reference": "50f59d1f3ca46d41ac911f97a78626b6756af35b",
                 "shasum": ""
             },
             "require": {
@@ -3560,7 +3560,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.6-dev"
+                    "dev-main": "3.7-dev"
                 }
             },
             "autoload": {
@@ -3585,7 +3585,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.6.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.7.0"
             },
             "funding": [
                 {
@@ -3597,11 +3597,15 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:21:43+00:00"
+            "time": "2026-04-13T15:52:40+00:00"
         },
         {
             "name": "symfony/error-handler",
@@ -5239,16 +5243,16 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v3.6.1",
+            "version": "v3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "45112560a3ba2d715666a509a0bc9521d10b6c43"
+                "reference": "d25d82433a80eba6aa0e6c24b61d7370d99e444a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/45112560a3ba2d715666a509a0bc9521d10b6c43",
-                "reference": "45112560a3ba2d715666a509a0bc9521d10b6c43",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/d25d82433a80eba6aa0e6c24b61d7370d99e444a",
+                "reference": "d25d82433a80eba6aa0e6c24b61d7370d99e444a",
                 "shasum": ""
             },
             "require": {
@@ -5266,7 +5270,7 @@
                     "name": "symfony/contracts"
                 },
                 "branch-alias": {
-                    "dev-main": "3.6-dev"
+                    "dev-main": "3.7-dev"
                 }
             },
             "autoload": {
@@ -5302,7 +5306,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v3.6.1"
+                "source": "https://github.com/symfony/service-contracts/tree/v3.7.0"
             },
             "funding": [
                 {
@@ -5322,7 +5326,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-15T11:30:57+00:00"
+            "time": "2026-03-28T09:44:51+00:00"
         },
         {
             "name": "symfony/string",
@@ -6560,6 +6564,43 @@
                 "source": "https://github.com/Jean85/pretty-package-versions/tree/2.1.1"
             },
             "time": "2025-03-19T14:43:43+00:00"
+        },
+        {
+            "name": "joetannenbaum/chewie",
+            "version": "0.1.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/joetannenbaum/chewie.git",
+                "reference": "7040f1c157e6756f45f49f4a821303cae3cfe424"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joetannenbaum/chewie/zipball/7040f1c157e6756f45f49f4a821303cae3cfe424",
+                "reference": "7040f1c157e6756f45f49f4a821303cae3cfe424",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/prompts": "0.x"
+            },
+            "require-dev": {
+                "pestphp/pest": "^2.33",
+                "tightenco/duster": "^2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Chewie\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/joetannenbaum/chewie/issues",
+                "source": "https://github.com/joetannenbaum/chewie/tree/0.1.11"
+            },
+            "time": "2024-12-07T01:53:54+00:00"
         },
         {
             "name": "laravel/pint",
@@ -9007,6 +9048,284 @@
             "time": "2025-02-07T05:00:38+00:00"
         },
         {
+            "name": "soloterm/dumps",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soloterm/dumps.git",
+                "reference": "829ad564381d8eca34b381c0032656bd7e2a60c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soloterm/dumps/zipball/829ad564381d8eca34b381c0032656bd7e2a60c6",
+                "reference": "829ad564381d8eca34b381c0032656bd7e2a60c6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^10|^11|^12|^13.0",
+                "illuminate/support": "^10|^11|^12|^13.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "illuminate/process": "^10|^11|^12|^13.0",
+                "orchestra/testbench": "^8.29|^9.5|^10|^11.0",
+                "phpunit/phpunit": "^10.5|^11|^12.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "SoloTerm\\Dumps\\Providers\\DumpServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SoloTerm\\Dumps\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aarondfrancis@gmail.com"
+                }
+            ],
+            "description": "A Laravel command to intercept dumps from your Laravel application.",
+            "support": {
+                "issues": "https://github.com/soloterm/dumps/issues",
+                "source": "https://github.com/soloterm/dumps/tree/v1.1.0"
+            },
+            "time": "2026-03-16T16:57:57+00:00"
+        },
+        {
+            "name": "soloterm/grapheme",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soloterm/grapheme.git",
+                "reference": "355a0b90a19b394705fff875417a12c662985b10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soloterm/grapheme/zipball/355a0b90a19b394705fff875417a12c662985b10",
+                "reference": "355a0b90a19b394705fff875417a12c662985b10",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "symfony/polyfill-intl-grapheme": "^1.27.0",
+                "symfony/polyfill-intl-normalizer": "^1.27.0",
+                "symfony/polyfill-mbstring": "^1.27.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5|^11"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SoloTerm\\Grapheme\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aarondfrancis@gmail.com"
+                }
+            ],
+            "description": "A PHP package to measure the width of unicode strings rendered to a terminal.",
+            "support": {
+                "issues": "https://github.com/soloterm/grapheme/issues",
+                "source": "https://github.com/soloterm/grapheme/tree/v1.1.1"
+            },
+            "time": "2026-03-16T01:01:20+00:00"
+        },
+        {
+            "name": "soloterm/screen",
+            "version": "v1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soloterm/screen.git",
+                "reference": "7a2d097ac7c69bda3c0c92e9d61b51f9b64e2cff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soloterm/screen/zipball/7a2d097ac7c69bda3c0c92e9d61b51f9b64e2cff",
+                "reference": "7a2d097ac7c69bda3c0c92e9d61b51f9b64e2cff",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^8.1",
+                "soloterm/grapheme": "^v1.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5|^11",
+                "symfony/console": "^6.4|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SoloTerm\\Screen\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aarondfrancis@gmail.com"
+                }
+            ],
+            "description": "A terminal renderer written in pure PHP.",
+            "support": {
+                "issues": "https://github.com/soloterm/screen/issues",
+                "source": "https://github.com/soloterm/screen/tree/v1.1.4"
+            },
+            "time": "2026-03-16T21:58:36+00:00"
+        },
+        {
+            "name": "soloterm/solo",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soloterm/solo.git",
+                "reference": "969190f8bf8fd60483c424306f84a0fd2aacc7a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soloterm/solo/zipball/969190f8bf8fd60483c424306f84a0fd2aacc7a6",
+                "reference": "969190f8bf8fd60483c424306f84a0fd2aacc7a6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcntl": "*",
+                "ext-posix": "*",
+                "illuminate/console": "^10|^11|^12|^13.0",
+                "illuminate/process": "^10|^11|^12|^13.0",
+                "illuminate/support": "^10|^11|^12|^13.0",
+                "joetannenbaum/chewie": "^0.1",
+                "laravel/prompts": "^0.1.21|^0.2|^0.3",
+                "php": "^8.2",
+                "soloterm/dumps": "^1.1.0",
+                "soloterm/grapheme": "^1",
+                "soloterm/screen": "^1.1.4"
+            },
+            "require-dev": {
+                "illuminate/database": "^10|^11|^12|^13.0",
+                "larastan/larastan": "^3.9.3@stable",
+                "laravel/serializable-closure": "^1.3|^2.0",
+                "mockery/mockery": "1.6.12",
+                "orchestra/testbench": "^8.29|^9.5|^10|^11.0",
+                "phpstan/phpstan": "^2.1.32@stable",
+                "phpunit/phpunit": "^10.5|^11|^12.5"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "SoloTerm\\Solo\\Providers\\SoloServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SoloTerm\\Solo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aarondfrancis@gmail.com"
+                }
+            ],
+            "description": "A Laravel package to run multiple commands at once, to aid in local development.",
+            "keywords": [
+                "dev"
+            ],
+            "support": {
+                "issues": "https://github.com/soloterm/solo/issues",
+                "source": "https://github.com/soloterm/solo/tree/main"
+            },
+            "time": "2026-03-17T16:42:37+00:00"
+        },
+        {
+            "name": "soloterm/vtail",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/soloterm/vtail.git",
+                "reference": "69606ebe1cae5679aa26686d1405b3b0134a39e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/soloterm/vtail/zipball/69606ebe1cae5679aa26686d1405b3b0134a39e7",
+                "reference": "69606ebe1cae5679aa26686d1405b3b0134a39e7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-pcntl": "*",
+                "ext-posix": "*",
+                "php": "^8.1",
+                "soloterm/grapheme": "^1",
+                "soloterm/screen": "@dev",
+                "symfony/console": "^6.0|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5|^11"
+            },
+            "bin": [
+                "bin/vtail"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SoloTerm\\Vtail\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Francis",
+                    "email": "aaron@tryhardstudios.com"
+                }
+            ],
+            "description": "Vendor-aware tail for Laravel logs with stack trace formatting and vendor frame collapsing",
+            "keywords": [
+                "cli",
+                "laravel",
+                "log",
+                "tail",
+                "terminal"
+            ],
+            "support": {
+                "issues": "https://github.com/soloterm/vtail/issues",
+                "source": "https://github.com/soloterm/vtail/tree/v0.1.0"
+            },
+            "time": "2025-12-16T22:04:44+00:00"
+        },
+        {
             "name": "staabm/side-effects-detector",
             "version": "1.0.5",
             "source": {
@@ -9230,9 +9549,24 @@
             "time": "2026-04-11T10:33:05+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "soloterm/solo",
+            "version": "dev-main",
+            "alias": "0.5.99",
+            "alias_normalized": "0.5.99.0"
+        },
+        {
+            "package": "symfony/console",
+            "version": "8.0.9.0",
+            "alias": "7.99.99",
+            "alias_normalized": "7.99.99.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "soloterm/solo": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
