@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://aniftyco.com" target="_blank"><img src="https://raw.githubusercontent.com/aniftyco/laravel/master/.github/assets/logo.svg" width="400" alt="NiftyCo Laravel Starter Kit"></a></p>
 
 <p align="center">
 <a href="https://github.com/aniftyco/laravel/actions"><img src="https://github.com/aniftyco/laravel/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
