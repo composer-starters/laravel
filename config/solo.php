@@ -1,7 +1,6 @@
 <?php
 
 use SoloTerm\Solo\Commands\Command;
-use SoloTerm\Solo\Commands\MakeCommand;
 use SoloTerm\Solo\Hotkeys;
 use SoloTerm\Solo\Themes;
 
@@ -47,7 +46,6 @@ return [
     'commands' => [
         'Logs' => 'tail -n 100 -f ' . storage_path('logs/laravel.log'),
         'Vite' => 'npm start --silent',
-        'Make' => new MakeCommand,
 
         // Lazy commands do no automatically start when Solo starts.
         'Dumps' => Command::from('php artisan solo:dumps')->lazy(),
