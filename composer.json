@@ -16,6 +16,7 @@
     "php": "^8.5",
     "laravel/framework": "^13.7",
     "laravel/tinker": "^3.0",
+    "livewire/livewire": "^4.3",
     "symfony/console": "v8.0.9 as 7.99.99"
   },
   "require-dev": {
