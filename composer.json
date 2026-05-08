@@ -24,8 +24,7 @@
     "mockery/mockery": "^1.6",
     "pestphp/pest": "^4.4",
     "pestphp/pest-plugin-laravel": "^4.0",
-    "soloterm/solo": "dev-main as 0.5.99",
-    "soloterm/vtail": "^0.1.0"
+    "soloterm/solo": "dev-main as 0.5.99"
   },
   "autoload": {
     "psr-4": {

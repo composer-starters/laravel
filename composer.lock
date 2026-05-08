@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78169511bc3b1873e060986b0f542cfd",
+    "content-hash": "d1fc885321c251cb0971d72eadfd340d",
     "packages": [
         {
             "name": "brick/math",
@@ -9265,65 +9265,6 @@
                 "source": "https://github.com/soloterm/solo/tree/main"
             },
             "time": "2026-03-17T16:42:37+00:00"
-        },
-        {
-            "name": "soloterm/vtail",
-            "version": "v0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/soloterm/vtail.git",
-                "reference": "69606ebe1cae5679aa26686d1405b3b0134a39e7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/soloterm/vtail/zipball/69606ebe1cae5679aa26686d1405b3b0134a39e7",
-                "reference": "69606ebe1cae5679aa26686d1405b3b0134a39e7",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "ext-pcntl": "*",
-                "ext-posix": "*",
-                "php": "^8.1",
-                "soloterm/grapheme": "^1",
-                "soloterm/screen": "@dev",
-                "symfony/console": "^6.0|^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^10.5|^11"
-            },
-            "bin": [
-                "bin/vtail"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SoloTerm\\Vtail\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aaron Francis",
-                    "email": "aaron@tryhardstudios.com"
-                }
-            ],
-            "description": "Vendor-aware tail for Laravel logs with stack trace formatting and vendor frame collapsing",
-            "keywords": [
-                "cli",
-                "laravel",
-                "log",
-                "tail",
-                "terminal"
-            ],
-            "support": {
-                "issues": "https://github.com/soloterm/vtail/issues",
-                "source": "https://github.com/soloterm/vtail/tree/v0.1.0"
-            },
-            "time": "2025-12-16T22:04:44+00:00"
         },
         {
             "name": "staabm/side-effects-detector",

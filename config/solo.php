@@ -45,7 +45,7 @@ return [
     |
     */
     'commands' => [
-        'Logs' => './vendor/bin/vtail '.storage_path('logs/laravel.log'),
+        'Logs' => 'tail -n 100 -f ' . storage_path('logs/laravel.log'),
         'Vite' => 'npm start --silent',
         'Make' => new MakeCommand,
 
