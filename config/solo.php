@@ -44,7 +44,7 @@ return [
     |
     */
     'commands' => [
-        'Logs' => 'tail -n 100 -f ' . storage_path('logs/laravel.log'),
+        'Logs' => 'tail -n 100 -f '.storage_path('logs/laravel.log'),
         'Vite' => 'npm start --silent',
 
         // Lazy commands do no automatically start when Solo starts.
